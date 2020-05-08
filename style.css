@@ -1,0 +1,35 @@
+.smalltext{
+    font-size: 20px;
+}
+
+
+.leftcontainer{
+  height: 700px;
+  border: 3px solid green;
+  position: relative;
+}
+
+.aligncenter {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#readText{
+    border-color: gray;
+    border-left: 5px;
+}
+
+#clock{
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.card-title{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
