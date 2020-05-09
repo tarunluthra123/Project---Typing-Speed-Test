@@ -2,8 +2,19 @@ let readBox = $('#readText')[0]
 let inputBox = $('#inputText')
 let btnStart = $('#btnStartTest')
 let clock = $('#clock')[0]
-let resultBlock = $('#resultBlock')[0]
+let resultBlock = $('#resultBlock')
 let endTestBtn = $('#endTestBtn')
+let restartTestBtn = $('#restartTestBtn')
+let resultModal = $('#resultModal')
+let modalResultText = $('#modalResultText')[0]
+let bestScoreBlock = $('#bestScoreBlock')
+
+
+let sampleText = 'Sample Text will appear here.<br>'
+for (let i = 0; i < 2; i++)
+    sampleText += sampleText
+console.log(sampleText);
+
 
 // Clock code
 let id = 0;
@@ -53,8 +64,16 @@ function timeUp(id) {
 btnStart.click(() => {
     btnStart.prop('hidden', true)
     endTestBtn.prop('hidden', false)
+    $('#inputBoxContainer').prop('hidden', false)
+    $('#readBoxContainer').prop('hidden', false)
+    getReadText()
+    clockStopWatch()
+})
 
-
+restartTestBtn.click(() => {
+    endTestBtn.prop('hidden', false)
+    restartTestBtn.prop('hidden', true)
+    inputBox.val('')
     getReadText()
     clockStopWatch()
 })
@@ -65,10 +84,17 @@ function getReadText() {
     readBox.innerText = loremipsum
 }
 
+let maxScore = 0;
 
 function endTest() {
     let originalText = readBox.innerText;
     let inputText = inputBox.val();
+    inputBox.val('')
+
+    readBox.innerHTML = sampleText
+
+    endTestBtn.prop('hidden', true)
+    restartTestBtn.prop('hidden', false)
 
     let origArr = originalText.split(' ')
     console.log('ok');
@@ -85,7 +111,29 @@ function endTest() {
     console.log(finalResult);
     console.log(resultBlock);
 
-    resultBlock.innerText = finalResult
+    let exp = ''
+    if (correctWords <= 30) {
+        exp = 'You can do better.'
+    } else if (correctWords <= 60) {
+        exp = 'Well done!'
+    } else if (correctWords <= 90) {
+        exp = 'You have got some fast fingers.'
+    } else {
+        exp = 'Holy Shit! Are your hands okay?'
+    }
+
+    if (correctWords > maxScore)
+        maxScore = correctWords
+
+    bestScoreBlock.prop('hidden', false)
+    bestScoreBlock[0].innerText = 'Your Best Score so far : ' + maxScore + ' words/min'
+
+    modalResultText.innerText = 'Your typing speed is ' + finalResult + '. ' + exp
+
+    resultModal.modal()
+    console.log('res - ', finalResult);
+    resultBlock.prop('hidden', false)
+    resultBlock[0].innerText = 'Your last score - ' + finalResult
 }
 
 endTestBtn.click(() => {

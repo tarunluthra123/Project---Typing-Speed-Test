@@ -24,6 +24,25 @@
 </head>
 
 <body>
+    <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resultModalLabel">Test Completed</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalResultText">
+                    You have scored xxx
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <h1 align="center" class="display-2">
         Typing Speed Test
         <small class="text-muted smalltext">By Tarun Luthra</small>
@@ -41,7 +60,7 @@
 
 
                 <!-- Read text box -->
-                <div class="m-2 p-2">
+                <div class="m-2 p-2" id="readBoxContainer" hidden>
                     <label for="readText" class="h4">Sample Text</label>
                     <div class="card">
                         <div class="card-body" id="readText">
@@ -51,7 +70,7 @@
                 </div>
 
                 <!-- Input text box -->
-                <div class="form-group m-2 p-2">
+                <div class="form-group m-2 p-2" id="inputBoxContainer" hidden>
                     <label for="inputText" class="h4">Type here</label>
                     <textarea class="form-control" id="inputText" rows="9"
                         placeholder="Type the above text here"></textarea>
@@ -60,6 +79,9 @@
                 <div id="endTestContainer" align="center">
                     <button id="endTestBtn" hidden class="btn btn-primary btn-lg">END TEST</button>
                 </div>
+                <div id="restartTestContainer" align="center">
+                    <button id="restartTestBtn" hidden class="btn btn-primary btn-lg">RESTART TEST</button>
+                </div>
             </div>
 
             <!-- Empty container for gap -->
@@ -67,18 +89,20 @@
 
             <!-- Right Container -->
             <div class="col-4 leftcontainer">
-                <div class="card p-2 m-4" style="width: 18rem;">
-                    <div class="card-body">
+                <div class="d-flex p-2 m-4" style="width: 18rem;">
+                    <div class="card-body" id="stopwatch">
                         <h4 class="card-title">Stopwatch</h4>
                         <div class="card-text" id="clock">Timer</div>
                         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
                 </div>
-                <div>
-                    <!-- Result  -->
-                    Result -
-                    <div id="resultBlock">res block</div>
+                <div class="alert alert-info" role="alert" hidden id="resultBlock">
+                    Your last score was :
                 </div>
+                <div class="alert alert-dark" role="alert" hidden id="bestScoreBlock">
+                    Your Best Score so far :
+                </div>
+
             </div>
         </div>
     </div>

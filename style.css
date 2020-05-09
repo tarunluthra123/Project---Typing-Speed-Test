@@ -2,11 +2,19 @@
     font-size: 20px;
 }
 
-
 .leftcontainer{
   height: 700px;
-  border: 3px solid green;
+  /* border: 3px solid rgb(68, 191, 228); */
   position: relative;
+}
+
+body{
+  background-color: rgb(214, 219, 223);
+}
+
+h1{
+  color: darkblue;
+  font-family: cursive;
 }
 
 .aligncenter {
@@ -32,4 +40,10 @@
   text-align: center;
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
+}
+#stopwatch{
+  background-color:   rgb(111, 170, 221);
+}
+#bestScoreBlock{
+  /* background-color: rgb(128, 196, 97); */
 }
