@@ -1,10 +1,12 @@
 .smalltext{
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: 30%;
 }
 
 .leftcontainer{
   height: 700px;
-  /* border: 3px solid rgb(68, 191, 228); */
+  /* height: 100%; */
+  border: 3px solid rgb(68, 191, 228);
   position: relative;
 }
 
@@ -12,9 +14,10 @@ body{
   background-color: rgb(214, 219, 223);
 }
 
-h1{
+p{
   color: darkblue;
   font-family: cursive;
+  font-size: 10%;
 }
 
 .aligncenter {
@@ -27,11 +30,12 @@ h1{
 
 #readText{
     border-color: gray;
-    border-left: 5px;
+    border-left: 4%;
 }
 
 #clock{
-  font-size: 50px;
+  /* font-size: 50px; */
+  font-size: 400%;
   text-align: center;
   font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -42,8 +46,26 @@ h1{
   font-family: 'Times New Roman', Times, serif;
 }
 #stopwatch{
-  background-color:   rgb(111, 170, 221);
+  background-color: rgb(111, 170, 221);
 }
 #bestScoreBlock{
-  /* background-color: rgb(128, 196, 97); */
+  color: white;
+  background-color: rgb(50, 122, 216);
+  align-self: center;
+}
+
+#btnStartTest{
+  color: white;
+  background-color: rgb(17, 124, 218);
+}
+.alert{
+  align-self: center;
+  align-content: center;
+  align-items: center;
+}
+
+
+#inputBoxContainer #inputText:focus {
+    /* border: 1px solid rgba(41, 97, 219, 0.25); */
+    box-shadow: 0 0 0 0.2rem rgba(41, 219, 190, 0.25);
 }

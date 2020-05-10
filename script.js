@@ -10,6 +10,8 @@ let modalResultText = $('#modalResultText')[0]
 let bestScoreBlock = $('#bestScoreBlock')
 
 
+
+
 let sampleText = 'Sample Text will appear here.<br>'
 for (let i = 0; i < 2; i++)
     sampleText += sampleText
@@ -68,6 +70,9 @@ btnStart.click(() => {
     $('#readBoxContainer').prop('hidden', false)
     getReadText()
     clockStopWatch()
+    inputBox.bind("cut copy paste", function (e) {
+        e.preventDefault();
+    });
 })
 
 restartTestBtn.click(() => {
