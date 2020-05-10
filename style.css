@@ -6,7 +6,7 @@
 .leftcontainer{
   height: 700px;
   /* height: 100%; */
-  border: 3px solid rgb(68, 191, 228);
+  /* border: 3px solid rgb(68, 191, 228); */
   position: relative;
 }
 
@@ -69,3 +69,91 @@ p{
     /* border: 1px solid rgba(41, 97, 219, 0.25); */
     box-shadow: 0 0 0 0.2rem rgba(41, 219, 190, 0.25);
 }
+
+.h4{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#inputText, #readText{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#pageHeading{
+    font-size: 100px;
+  }
+@media (max-width:1200px){
+  #pageHeading{
+    font-size:90px;
+  }
+  #stopwatch{
+    width: 40px;
+  }
+  #clock{
+    font-size: 40px;
+  }
+}
+@media (max-width:900px){
+  #pageHeading{
+    font-size:80px;
+  }
+  #emptycol{
+    display: none;
+  }
+}
+@media (max-width:800px){
+  #pageHeading{
+    font-size: 75px;
+  }
+}
+@media (max-width:770px){
+  #pageHeading{
+    font-size: 70px;
+  }
+  #stopwatch{
+    width: 30px;
+  }
+  #clock{
+    font-size: 30px;
+  }
+  .card-title{
+    font-size: 17px;
+  }
+}
+@media (max-width:700px){
+  #pageHeading{
+    font-size:65px;
+  }
+}
+@media (max-width:650px){
+  #pageHeading{
+    font-size:60px;
+  }
+}
+@media (max-width:600px){
+  #pageHeading{
+    font-size:55px;
+  }
+}
+@media (max-width:550px){
+  #pageHeading{
+    font-size:50px;
+  }
+  #stopwatch{
+    width: 20px;
+    padding: 1px;
+    margin: 1px;
+  }
+  #clock{
+    font-size: 20px;
+  }
+  .card-title{
+    font-size: 13px;
+  }
+}
+@media (max-width:500px){
+  #pageHeading{
+    font-size: 45px;
+  }
+  
+}
+

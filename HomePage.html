@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <p align="center" class="display-2">
+    <p align="center" class="display-2" id="pageHeading">
         Typing Speed Test
         <small class="text-muted smalltext">By Tarun Luthra</small>
     </p>
@@ -72,7 +72,7 @@
                 <!-- Input text box -->
                 <div class="form-group m-2 p-2" id="inputBoxContainer" hidden>
                     <label for="inputText" class="h4">Type here</label>
-                    <textarea class="form-control myclass" id="inputText" rows="9"
+                    <textarea class="form-control" id="inputText" rows="9"
                         placeholder="Type the above text here"></textarea>
                 </div>
 
@@ -85,7 +85,7 @@
             </div>
 
             <!-- Empty container for gap -->
-            <div class="col-1"></div>
+            <div class="col-1" id="emptycol"></div>
 
             <!-- Right Container -->
             <div class="col-4 leftcontainer">
@@ -93,7 +93,6 @@
                     <div class="flex card-body" id="stopwatch">
                         <h4 class="card-title">Stopwatch</h4>
                         <div class="card-text" id="clock">Timer</div>
-                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
                 </div>
                 <div class="alert alert-info" role="alert" hidden id="resultBlock">
