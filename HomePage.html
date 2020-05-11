@@ -24,6 +24,8 @@
 </head>
 
 <body>
+    <!-- Modal to pop up after test is done -->
+    <!-- Popped using JS -->
     <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -43,23 +45,33 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Heading Text -->
     <p align="center" class="display-2" id="pageHeading">
         Typing Speed Test
         <small class="text-muted smalltext">By Tarun Luthra</small>
     </p>
+
     <br>
+
+    <!-- Container for the remainder of the body -->
     <div class="container">
         <div class="row">
-            <div class="col-7 leftcontainer">
-                <!-- Column containing input boxes -->
+
+            <!-- Left box  -->
+            <!-- Column containing sample text and input boxes -->
+            <div class="col-7 containerbox">
 
                 <!-- Start Test Button -->
+                <!-- This button pops up when page is first viewed at the center of left containerbox -->
                 <button type="button" class="aligncenter btn btn-lg btn-block" id="btnStartTest">
                     <font size="25">Start Test</font>
                 </button>
 
 
                 <!-- Read text box -->
+                <!-- This contains the text that is to be typed -->
                 <div class="m-2 p-2" id="readBoxContainer" hidden>
                     <label for="readText" class="h4">Sample Text</label>
                     <div class="card">
@@ -70,34 +82,50 @@
                 </div>
 
                 <!-- Input text box -->
+                <!-- User types in  this text box -->
                 <div class="form-group m-2 p-2" id="inputBoxContainer" hidden>
                     <label for="inputText" class="h4">Type here</label>
                     <textarea class="form-control" id="inputText" rows="9"
                         placeholder="Type the above text here"></textarea>
                 </div>
 
+                <!-- End test button -->
+                <!-- Shows only when test is ongoing -->
                 <div id="endTestContainer" align="center">
                     <button id="endTestBtn" hidden class="btn btn-primary btn-lg">END TEST</button>
                 </div>
+
+                <!-- Restart test button -->
+                <!-- Shows only after completion of test -->
                 <div id="restartTestContainer" align="center">
                     <button id="restartTestBtn" hidden class="btn btn-primary btn-lg">RESTART TEST</button>
                 </div>
             </div>
 
             <!-- Empty container for gap -->
+            <!-- Gets removed when screen size is lesser -->
             <div class="col-1" id="emptycol"></div>
 
             <!-- Right Container -->
-            <div class="col-4 leftcontainer">
+            <!-- This contains Stopwatch and results -->
+            <div class="col-4 containerbox">
+
+                <!-- Container box containing stopwatch -->
                 <div class="d-flex p-2 m-2">
                     <div class="flex card-body" id="stopwatch">
                         <h4 class="card-title">Stopwatch</h4>
                         <div class="card-text" id="clock">Timer</div>
                     </div>
                 </div>
+
+                <!-- Alert text boxes containing results -->
+                <!-- These only show after completion of atleast one test -->
+
+                <!-- Alert message containing score of previous test -->
                 <div class="alert alert-info" role="alert" hidden id="resultBlock">
                     Your last score was :
                 </div>
+                <!-- Alert message containing best score so far -->
                 <div class="alert alert-dark" role="alert" hidden id="bestScoreBlock">
                     Your Best Score so far :
                 </div>

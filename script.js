@@ -11,14 +11,14 @@ let bestScoreBlock = $('#bestScoreBlock')
 
 
 
-
+// Sample text which appears when text is not going on
 let sampleText = 'Sample Text will appear here.<br>'
 for (let i = 0; i < 2; i++)
     sampleText += sampleText
 console.log(sampleText);
 
 
-// Clock code
+// Stopwatch clock code
 let id = 0;
 function clockStopWatch() {
     let totalTime = 60;
@@ -56,13 +56,16 @@ function clockStopWatch() {
 
 }
 
+// Function to end stopwatch, calls endTest()
 function timeUp(id) {
     clearInterval(id);
     clock.innerHTML = "TIME UP";
     endTest();
 }
 
-
+// Button to start the test
+// Activated when start button is clicked
+// Only works once at the beginning
 btnStart.click(() => {
     btnStart.prop('hidden', true)
     endTestBtn.prop('hidden', false)
@@ -75,6 +78,9 @@ btnStart.click(() => {
     });
 })
 
+
+// Restart Test button which restarts the test
+// Similar to start test
 restartTestBtn.click(() => {
     endTestBtn.prop('hidden', false)
     restartTestBtn.prop('hidden', true)
@@ -84,13 +90,17 @@ restartTestBtn.click(() => {
 })
 
 
+// Generates the sample text for the sample text
+// This is the text to be typed in the input box
 function getReadText() {
     let loremipsum = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum";
     readBox.innerText = loremipsum
 }
 
+// Max score for the best score alert
 let maxScore = 0;
 
+// End test function which computes and shows the result
 function endTest() {
     let originalText = readBox.innerText;
     let inputText = inputBox.val();

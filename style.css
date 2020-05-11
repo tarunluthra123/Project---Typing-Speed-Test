@@ -1,17 +1,19 @@
+/* Heading formatting */
 .smalltext{
     /* font-size: 20px; */
     font-size: 30%;
 }
 
-.leftcontainer{
+#pageHeading{
+    font-size: 100px;
+}
+
+/* Formatting for container boxes */
+.containerbox{
   height: 700px;
   /* height: 100%; */
   /* border: 3px solid rgb(68, 191, 228); */
   position: relative;
-}
-
-body{
-  background-color: rgb(214, 219, 223);
 }
 
 p{
@@ -19,6 +21,12 @@ p{
   font-family: cursive;
   font-size: 10%;
 }
+
+/* Body background */
+body{
+  background-color: rgb(214, 219, 223);
+}
+
 
 .aligncenter {
   margin: 0;
@@ -28,45 +36,15 @@ p{
   transform: translate(-50%, -50%);
 }
 
+/* Sample text and input text box formatting */
 #readText{
     border-color: gray;
     border-left: 4%;
 }
 
-#clock{
-  /* font-size: 50px; */
-  font-size: 400%;
-  text-align: center;
-  font-weight: bold;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.card-title{
-  text-align: center;
-  font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
-}
-#stopwatch{
-  background-color: rgb(111, 170, 221);
-}
-#bestScoreBlock{
-  color: white;
-  background-color: rgb(50, 122, 216);
-  align-self: center;
-}
-
-#btnStartTest{
-  color: white;
-  background-color: rgb(17, 124, 218);
-}
-.alert{
-  align-self: center;
-  align-content: center;
-  align-items: center;
-}
-
-
 #inputBoxContainer #inputText:focus {
-    /* border: 1px solid rgba(41, 97, 219, 0.25); */
+  /* Fixes the textarea bootstrap glow color */
+  /* border: 1px solid rgba(41, 97, 219, 0.25); */
     box-shadow: 0 0 0 0.2rem rgba(41, 219, 190, 0.25);
 }
 
@@ -78,9 +56,48 @@ p{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#pageHeading{
-    font-size: 100px;
-  }
+/* Stopwatch container formatting */
+#clock{
+  /* font-size: 50px; */
+  font-size: 400%;
+  text-align: center;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.card-title{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#stopwatch{
+  background-color: rgb(111, 170, 221);
+}
+
+
+/* Result container */
+#bestScoreBlock{
+  color: white;
+  background-color: rgb(50, 122, 216);
+  align-self: center;
+}
+
+.alert{
+  align-self: center;
+  align-content: center;
+  align-items: center;
+}
+
+/* Start button formatting */
+#btnStartTest{
+  color: white;
+  background-color: rgb(17, 124, 218);
+}
+
+
+/* Media queries to make page responsive */
+
 @media (max-width:1200px){
   #pageHeading{
     font-size:90px;
